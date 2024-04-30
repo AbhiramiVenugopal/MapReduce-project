@@ -1,0 +1,12 @@
+name: abhirami venugopal
+student number: 216940256
+
+i'm getting error when im running the gutenburg files. i think because 
+of some utf8 format issue. so i am using 3 input files called input1.txt, 
+input2.txt and input3.txt that i wrote myself.
+
+i was not able to install hadoop on my computer, i ran into masking/unmasking
+issues. i tried using virtualbox too even that didn't work. 
+
+right now if you run the file called "runmain.py" you will get the output
+in the file called "reducer3_output.txt"
