@@ -77,8 +77,8 @@ _ex	3	2.995732
 _extra	3	2.995732
 _face	3	2.995732
 _festina	3	2.995732
-_fianc„_	3	2.995732
-_fianc„e_	3	2.995732
+_fianc√£_	3	2.995732
+_fianc√£e_	3	2.995732
 _firstly_we	3	2.995732
 _ground	3	2.995732
 _have_	3	2.995732
@@ -156,7 +156,7 @@ _pro_	3	2.995732
 _publishers_	3	2.995732
 _quatre	3	2.995732
 _quite_	3	2.995732
-_qu„_	3	2.995732
+_qu√£_	3	2.995732
 _report	3	2.995732
 _reverse	3	2.995732
 _rufus	3	2.995732
@@ -199,7 +199,7 @@ _x_	3	2.995732
 _y_	3	2.995732
 _you_	3	2.995732
 _z_	3	2.995732
-_„	3	2.995732
+_√£	3	2.995732
 1	2	2.302585
 1	3	2.302585
 10	1	2.302585
@@ -1079,7 +1079,7 @@ anxiously	3	2.302585
 anyhowan	3	2.995732
 anyhowi	3	2.995732
 anywheres	3	2.995732
-an„mic	3	2.995732
+an√£mic	3	2.995732
 aowling	3	2.995732
 apace	2	2.995732
 apache	1	2.995732
@@ -1577,8 +1577,8 @@ ay	1	1.897120
 ay	2	1.897120
 ay	3	1.897120
 azure	1	2.995732
-a„rated	3	2.995732
-a„rial	3	2.995732
+a√£rated	3	2.995732
+a√£rial	3	2.995732
 b	1	2.302585
 b	3	2.302585
 babby	3	2.995732
@@ -2745,7 +2745,7 @@ byroad	3	2.995732
 byron	3	2.995732
 bytheway	1	2.995732
 byway	3	2.995732
-b„ton	3	2.995732
+b√£ton	3	2.995732
 c	1	2.302585
 c	3	2.302585
 cab	1	1.897120
@@ -2806,7 +2806,7 @@ calms	3	2.995732
 caltrops	1	2.995732
 calves	1	2.302585
 calves	2	2.302585
-cal„che	3	2.995732
+cal√£che	3	2.995732
 camberwell	1	2.995732
 camera	1	2.995732
 camera_	3	2.995732
@@ -2930,7 +2930,7 @@ carry	3	1.897120
 carrying	1	1.897120
 carrying	2	1.897120
 carrying	3	1.897120
-carr„e	1	2.995732
+carr√£e	1	2.995732
 cart	1	2.302585
 cart	3	2.302585
 carte	1	2.995732
@@ -4133,7 +4133,7 @@ corrupt	2	2.302585
 corrupt	3	2.302585
 corruption	3	2.995732
 cort	3	2.995732
-cort„ge	3	2.995732
+cort√£ge	3	2.995732
 cosmopolitan	1	2.995732
 cost	1	2.995732
 costers	1	2.995732
@@ -4493,7 +4493,7 @@ cylinders	1	2.302585
 cylinders	3	2.302585
 cynical	1	2.995732
 cypress	3	2.995732
-c„l„bres	1	2.995732
+c√£l√£bres	1	2.995732
 d	3	2.995732
 d_	3	2.995732
 dacians	3	2.995732
@@ -5727,7 +5727,7 @@ dying	3	2.302585
 dyingand	3	2.995732
 dynasties	3	2.995732
 dyou	1	2.995732
-d„nouement	1	2.995732
+d√£nouement	1	2.995732
 e	1	2.302585
 e	3	2.302585
 ead	3	2.995732
@@ -5984,7 +5984,7 @@ employing	1	2.995732
 employment	1	2.302585
 employment	3	2.302585
 employs	1	2.995732
-employ„	1	2.995732
+employ√£	1	2.995732
 empowered	3	2.995732
 emptied	1	2.302585
 emptied	3	2.302585
@@ -6838,7 +6838,7 @@ fewer	1	2.302585
 fewer	3	2.302585
 fez	3	2.995732
 fhm	1	2.995732
-fianc„and	1	2.995732
+fianc√£and	1	2.995732
 fiction	1	2.302585
 fiction	3	2.302585
 fiction_	3	2.995732
@@ -9111,7 +9111,7 @@ hypothesis	1	2.995732
 hysterical	1	2.302585
 hysterical	3	2.302585
 hysterics	3	2.995732
-h„morrhage	3	2.995732
+h√£morrhage	3	2.995732
 ice	1	1.897120
 ice	2	1.897120
 ice	3	1.897120
@@ -11214,7 +11214,7 @@ medicojurist	3	2.995732
 meditation	1	2.995732
 meditative	1	2.995732
 medium	3	2.995732
-medi„val	3	2.995732
+medi√£val	3	2.995732
 medusas	3	2.995732
 meekly	3	2.995732
 meekness	3	2.995732
@@ -11502,7 +11502,7 @@ modest	1	2.302585
 modest	3	2.302585
 modesty	3	2.995732
 mohawks	2	2.995732
-moh„cs	3	2.995732
+moh√£cs	3	2.995732
 moist	1	2.995732
 moistened	1	2.302585
 moistened	3	2.302585
@@ -11786,7 +11786,7 @@ mystery	3	2.302585
 mysterywas	3	2.995732
 mystifying	3	2.995732
 myth	1	2.995732
-m„tier	1	2.995732
+m√£tier	1	2.995732
 naananto	2	2.995732
 nail	1	2.995732
 nailed	3	2.995732
@@ -11846,8 +11846,8 @@ navigated	3	2.995732
 navy	3	2.995732
 nay	1	2.302585
 nay	3	2.302585
-na„vely	3	2.995732
-na„vet„	3	2.995732
+na√£vely	3	2.995732
+na√£vet√£	3	2.995732
 nearer	1	1.897120
 nearer	2	1.897120
 nearer	3	1.897120
@@ -12140,7 +12140,7 @@ nuts	3	2.302585
 nutshell	1	2.995732
 nux	2	2.995732
 ny	3	2.995732
-n„e	1	2.995732
+n√£e	1	2.995732
 o	1	1.897120
 o	2	1.897120
 o	3	1.897120
@@ -12510,7 +12510,7 @@ outrageous	3	2.302585
 outrages	1	2.302585
 outrages	3	2.302585
 outrider	3	2.995732
-outr„	1	2.995732
+outr√£	1	2.995732
 outset	1	2.302585
 outset	3	2.302585
 outsides	1	2.995732
@@ -14032,7 +14032,7 @@ puzzled	1	2.302585
 puzzled	3	2.302585
 puzzles	3	2.995732
 puzzling	1	2.995732
-p„t„	1	2.995732
+p√£t√£	1	2.995732
 q	3	2.995732
 quabaug	2	2.995732
 quaint	3	2.995732
@@ -15044,7 +15044,7 @@ romantic	3	2.995732
 romany	3	2.995732
 rome	3	2.995732
 romper	1	2.995732
-rom„	3	2.995732
+rom√£	3	2.995732
 roof	1	1.897120
 roof	2	1.897120
 roof	3	1.897120
@@ -15203,9 +15203,9 @@ ruthless	1	2.302585
 ruthless	3	2.302585
 ryder	1	2.995732
 ryders	1	2.995732
-r„gle_	3	2.995732
-r„le	3	2.995732
-r„pertoire	1	2.995732
+r√£gle_	3	2.995732
+r√£le	3	2.995732
+r√£pertoire	1	2.995732
 sabbath	2	2.995732
 sabbathdaymorning	2	2.995732
 sabbaths	2	2.995732
@@ -15718,7 +15718,7 @@ september_the	3	2.995732
 september_this	3	2.995732
 september_truly	3	2.995732
 september_when	3	2.995732
-september_zo„phagous	3	2.995732
+september_zo√£phagous	3	2.995732
 sequel	1	2.302585
 sequel	3	2.302585
 sequence	1	2.302585
@@ -19372,7 +19372,7 @@ voicehave	1	2.995732
 voices	1	2.302585
 voices	3	2.302585
 void	3	2.995732
-voil„	1	2.995732
+voil√£	1	2.995732
 voivode	3	2.995732
 volcanic	3	2.995732
 volcanoes	3	2.995732
@@ -20375,10 +20375,10 @@ zest	1	2.995732
 zigzag	1	2.995732
 zion	2	2.995732
 zoo	3	2.995732
-zo„logical	3	2.995732
-zo„phagous	3	2.995732
-zo„phagy	3	2.995732
-‚1	3	2.995732
-‚10	3	2.995732
-„t	3	2.995732
-„tat	3	2.995732
+zo√£logical	3	2.995732
+zo√£phagous	3	2.995732
+zo√£phagy	3	2.995732
+√¢1	3	2.995732
+√¢10	3	2.995732
+√£t	3	2.995732
+√£tat	3	2.995732
