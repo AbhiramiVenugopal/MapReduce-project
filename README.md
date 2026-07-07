@@ -1,43 +1,74 @@
-Hadoop MapReduce TF-IDF Implementation
+# Hadoop MapReduce TF-IDF Implementation
 
-A multi-stage MapReduce implementation that computes Term Frequency–Inverse Document Frequency (TF-IDF) scores for a collection of text documents using Python and Hadoop Streaming.
+A multi-stage **MapReduce** implementation that computes **Term Frequency–Inverse Document Frequency (TF-IDF)** scores for a collection of text documents using **Python** and **Hadoop Streaming**.
 
 This project demonstrates how a complex text analytics problem can be decomposed into multiple MapReduce jobs, where the output of one stage becomes the input to the next. It showcases distributed data processing concepts, text preprocessing, and the MapReduce programming model.
 
-Project Overview
+---
 
-The objective of this project is to calculate TF-IDF scores for words appearing across multiple documents.
+## Table of Contents
 
-TF-IDF is a widely used metric in:
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Project Structure](#project-structure)
+- [Processing Pipeline](#processing-pipeline)
+- [Execution Flow](#execution-flow)
+- [Running on Hadoop](#running-on-hadoop)
+- [Running Locally](#running-locally)
+- [Concepts Demonstrated](#concepts-demonstrated)
+- [Learning Outcomes](#learning-outcomes)
+- [Future Improvements](#future-improvements)
+- [Skills Demonstrated](#skills-demonstrated)
 
-Information Retrieval
-Search Engines
-Document Ranking
-Text Mining
-Natural Language Processing (NLP)
+---
 
-Instead of solving the problem in a single script, the computation is broken into a sequence of MapReduce jobs similar to how large-scale data processing is performed on Hadoop clusters.
+## Project Overview
 
-Features
-Multi-stage Hadoop Streaming pipeline
-Python-based Mapper and Reducer programs
-Text preprocessing and normalization
-Stop-word removal
-Word frequency aggregation
-Document frequency calculation
-TF-IDF score computation
-Batch execution using shell scripting
-Local execution pipeline for testing
+The objective of this project is to calculate **TF-IDF (Term Frequency–Inverse Document Frequency)** scores for words appearing across multiple text documents.
 
-Technology Stack
-Python 2
-Hadoop Streaming
-Hadoop MapReduce
-Bash
-Regular Expressions
-Linux Command Line
+TF-IDF is widely used in:
 
-Project Structure
+-  Search Engines
+-  Information Retrieval
+-  Document Ranking
+-  Text Mining
+-  Natural Language Processing (NLP)
+
+Rather than solving the problem in a single script, the computation is divided into multiple MapReduce jobs, similar to how large-scale data processing is performed on Hadoop clusters.
+
+---
+
+## Features
+
+- Multi-stage Hadoop Streaming pipeline
+- Custom Python Mapper and Reducer programs
+- Text preprocessing and normalization
+- Stop-word removal
+- Word frequency aggregation
+- Document frequency calculation
+- TF-IDF score computation
+- Batch execution using shell scripting
+- Local execution pipeline for testing
+
+---
+
+## Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Mapper & Reducer implementation |
+| Hadoop Streaming | Distributed execution |
+| Hadoop MapReduce | Parallel data processing |
+| Bash | Job orchestration |
+| Regular Expressions | Text cleaning |
+| Linux | Execution environment |
+
+---
+
+## Project Structure
+
+```text
 .
 ├── mapper1.py        # Text preprocessing and word extraction
 ├── reducer1.py       # Term frequency aggregation
@@ -49,137 +80,184 @@ Project Structure
 ├── runmain.py        # Local execution pipeline
 ├── README.md
 └── cover.txt
+```
 
-Processing Pipeline
-Stage 1 — Text Processing
+---
+
+## Processing Pipeline
+
+### Stage 1 — Text Processing
 
 The first mapper:
 
-Reads the input documents
-Converts text to lowercase
-Removes punctuation
-Splits text into individual words
-Removes stop words
-Emits:
+- Reads input documents
+- Converts text to lowercase
+- Removes punctuation
+- Splits text into individual words
+- Removes stop words
+
+Outputs:
+
+```text
 ((word, documentID), 1)
+```
 
-The first reducer aggregates identical keys to determine the number of occurrences of each word within each document.
+The first reducer aggregates identical keys to determine the frequency of each word within each document.
 
-Stage 2 — Document Statistics
+---
 
-The second MapReduce job reorganizes the intermediate output.
+### Stage 2 — Document Statistics
 
-Its responsibilities include:
+The second MapReduce job reorganizes the intermediate output by:
 
-Grouping words by document
-Counting occurrences
-Calculating document-level statistics
-Preparing data required for TF-IDF computation
-Stage 3 — TF-IDF Calculation
+- Grouping words by document
+- Counting occurrences
+- Calculating document-level statistics
+- Preparing data for TF-IDF computation
+
+---
+
+### Stage 3 — TF-IDF Calculation
 
 The final MapReduce job computes TF-IDF scores.
 
-For every word:
+For each word:
 
-Determine how many documents contain the word.
-Compute the inverse document frequency (IDF).
-Combine the term frequency with the IDF value.
-Output a TF-IDF score for each document containing that word.
-Execution Flow
+1. Determine the number of documents containing the word.
+2. Compute the Inverse Document Frequency (IDF).
+3. Combine TF and IDF.
+4. Output a TF-IDF score for each document.
+
+---
+
+## Execution Flow
+
+```text
 Input Documents
         │
         ▼
- Mapper 1
+   Mapper 1
         │
         ▼
-Reducer 1
+  Reducer 1
         │
         ▼
- Mapper 2
+   Mapper 2
         │
         ▼
-Reducer 2
+  Reducer 2
         │
         ▼
- Mapper 3
+   Mapper 3
         │
         ▼
-Reducer 3
+  Reducer 3
         │
         ▼
- TF-IDF Output
-Running on Hadoop
+   TF-IDF Output
+```
 
-Update the paths inside job.sh to match your Hadoop installation.
+---
+
+## Running on Hadoop
+
+Update the Hadoop paths inside `job.sh`.
 
 Execute:
 
+```bash
 bash job.sh
+```
 
-The script performs the following:
+The script:
 
-Removes previous output directories
-Executes the first Hadoop Streaming job
-Executes the second Hadoop Streaming job
-Executes the final Hadoop Streaming job
-Produces the TF-IDF output
-Running Locally
+1. Removes previous output directories
+2. Runs the first Hadoop Streaming job
+3. Runs the second Hadoop Streaming job
+4. Runs the final Hadoop Streaming job
+5. Produces the TF-IDF output
 
-The project also includes a local execution script for testing the MapReduce pipeline without submitting Hadoop jobs.
+---
 
+## Running Locally
+
+To execute the pipeline without Hadoop:
+
+```bash
 python runmain.py
+```
 
-The script automatically executes:
+The script sequentially runs:
 
-Mapper 1
-Reducer 1
-Mapper 2
-Reducer 2
-Mapper 3
-Reducer 3
+- Mapper 1
+- Reducer 1
+- Mapper 2
+- Reducer 2
+- Mapper 3
+- Reducer 3
 
-while sorting intermediate files between each stage to simulate Hadoop's shuffle and sort phase.
+Intermediate files are automatically sorted to simulate Hadoop's **Shuffle & Sort** phase.
 
-Concepts Demonstrated
+---
 
-This project demonstrates practical knowledge of:
+## Concepts Demonstrated
 
-MapReduce programming model
-Hadoop Streaming
-Distributed data processing
-Intermediate key-value pair generation
-Shuffle and sort workflow
-Text preprocessing
-Frequency analysis
-TF-IDF computation
-Batch job orchestration
-Data transformation pipelines
-Learning Outcomes
+This project demonstrates:
 
-Through this project I gained experience with:
+- Hadoop MapReduce programming
+- Hadoop Streaming
+- Distributed data processing
+- Multi-stage data pipelines
+- Key-value pair generation
+- Shuffle & Sort workflow
+- Text preprocessing
+- Word frequency analysis
+- TF-IDF computation
+- Batch job orchestration
 
-Designing multi-stage MapReduce workflows
-Breaking large computations into independent processing stages
-Building custom Mapper and Reducer programs
-Processing semi-structured text data
-Understanding how Hadoop distributes computation across multiple jobs
-Debugging data flow between MapReduce stages
-Possible Future Improvements
-Automatically determine the total number of documents instead of using a fixed value.
-Support arbitrary numbers of input documents.
-Improve TF normalization.
-Add automated testing.
-Containerize the project using Docker.
-Upgrade to Python 3 compatibility.
-Execute on a multi-node Hadoop cluster for scalability testing.
-Skills Demonstrated
-Python
-Hadoop
-MapReduce
-Distributed Computing
-Data Processing
-Text Analytics
-Linux
-Shell Scripting
-Regular Expressions
-Software Engineering
+---
+
+## Learning Outcomes
+
+Through this project, I gained experience in:
+
+- Designing multi-stage MapReduce workflows
+- Breaking complex computations into independent processing stages
+- Developing custom Mapper and Reducer programs
+- Processing semi-structured text data
+- Understanding Hadoop's distributed processing model
+- Debugging data flow across multiple MapReduce jobs
+
+---
+
+## Future Improvements
+
+- Automatically determine the total number of documents
+- Support arbitrary-sized datasets
+- Improve TF normalization
+- Add automated testing
+- Upgrade to Python 3
+- Containerize using Docker
+- Execute on a multi-node Hadoop cluster
+
+---
+
+## Skills Demonstrated
+
+- Python
+- Hadoop
+- Hadoop Streaming
+- MapReduce
+- Distributed Computing
+- Data Processing
+- Text Analytics
+- Linux
+- Shell Scripting
+- Regular Expressions
+- Software Engineering
+
+---
+
+## Author
+
+Developed as part of a Hadoop MapReduce project demonstrating distributed text processing and multi-stage data analytics using Python and Hadoop Streaming.
